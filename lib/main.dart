@@ -11,8 +11,18 @@ class MyApp extends StatelessWidget {
       home: Container(
         child: Scaffold(
           appBar: AppBar(
-            title: Text("Flutter App Example"),
-            centerTitle: true,
+
+            title:Center(
+              child: Row(
+              mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(Icons.star),
+              SizedBox(width:5.0),
+              Text("Flutter App Example"),
+              SizedBox(width:5.0),
+              Icon(Icons.star),
+            ],),)
+
           ),
           body: Center(
             child: Text("Hello World"),)
