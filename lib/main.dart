@@ -11,25 +11,23 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark(),
       home: Container(
         child: Scaffold(
-          appBar: AppBar(
-
-            title:Center(
-              child: Row(
-              mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Icon(Icons.star),
-              SizedBox(width:5.0),
-              Text("Flutter App Example"),
-              SizedBox(width:5.0),
-              Icon(Icons.star),
-            ],),)
-
-          ),
-          body: HomePage()
-        ),
+            appBar: AppBar(
+                title: titleWidget() ),
+            body: HomePage()),
       ),
     );
   }
-
 }
 
+Widget titleWidget(){
+  return Center(
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Icon(Icons.filter_drama),
+        Text("Weather Forecast"),
+        Icon(Icons.filter_drama),
+      ],
+    ),
+  );
+}
