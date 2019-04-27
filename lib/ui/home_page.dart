@@ -7,6 +7,12 @@ class HomePage extends StatelessWidget {
     return Column(
       children: <Widget>[
         dayWidget("Monday", Icons.wb_sunny, "32C"),
+        dayWidget("Tuesday", Icons.wb_sunny, "32C"),
+        dayWidget("Wednesday", Icons.wb_sunny, "32C"),
+        dayWidget("Thurday", Icons.wb_sunny, "32C"),
+        dayWidget("Friday", Icons.wb_sunny, "32C"),
+        dayWidget("Saturday", Icons.wb_sunny, "32C"),
+        dayWidget("Sunday", Icons.wb_sunny, "32C"),
       ],
     );
   }
