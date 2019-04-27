@@ -6,16 +6,27 @@ class HomePage extends StatelessWidget {
     // TODO: implement build
     return Column(
       children: <Widget>[
-        dayWidget("Monday", Icons.wb_sunny, "32C"),
-        dayWidget("Tuesday", Icons.wb_sunny, "32C"),
-        dayWidget("Wednesday", Icons.wb_sunny, "32C"),
-        dayWidget("Thurday", Icons.wb_sunny, "32C"),
-        dayWidget("Friday", Icons.wb_sunny, "32C"),
-        dayWidget("Saturday", Icons.wb_sunny, "32C"),
-        dayWidget("Sunday", Icons.wb_sunny, "32C"),
-      ],
+       listDays()
+      ]
     );
   }
+}
+
+Widget listDays() {
+  return Padding(
+    padding: const EdgeInsets.all(16.0),
+    child: Column(
+      children: <Widget>[
+        dayWidget("Monday", Icons.wb_sunny, "32C"),
+        dayWidget("Tuesday", Icons.wb_cloudy, "32C"),
+        dayWidget("Wednesday", Icons.wb_iridescent, "32C"),
+        dayWidget("Thurday", Icons.wb_cloudy, "32C"),
+        dayWidget("Friday", Icons.wb_sunny, "32C"),
+        dayWidget("Saturday", Icons.wb_cloudy, "32C"),
+        dayWidget("Sunday", Icons.wb_sunny, "32C"),
+      ],
+    ),
+  );
 }
 
 Widget dayWidget(String day, IconData iconData, String temp) {
