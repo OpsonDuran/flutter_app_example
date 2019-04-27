@@ -9,7 +9,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.dark(),
       home: Container(
-        child: Text("Hello World"),
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text("Flutter App Example"),
+            centerTitle: true,
+          ),
+          body: Center(
+            child: Text("Hello World"),)
+        ),
       ),
     );
   }
