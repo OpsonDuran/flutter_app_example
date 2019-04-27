@@ -17,6 +17,7 @@ Widget dayWidget(String day, IconData iconData, String temp) {
     child: Padding(
       padding: const EdgeInsets.all(22.0),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[Text(day), Icon(iconData), Text(temp)],
       ),
     ),
