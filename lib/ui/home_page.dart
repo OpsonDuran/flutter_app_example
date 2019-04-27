@@ -1,20 +1,37 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Column(
-      children: <Widget>[
-       listDays()
-      ]
-    );
+    return Column(children: <Widget>[headerHome(), listDays()]);
   }
+}
+
+Widget headerHome() {
+  return Stack(
+    children: <Widget>[
+      Container(
+        height: 100.0,
+        width: double.infinity,
+        child: Image.network(
+          "https://thetravelerbass.files.wordpress.com/2017/10/la-malinche-solitario-y-emblemc3a1tico-volcc3a1n-del-estado-de-tlaxcala.png",
+          fit: BoxFit.cover,
+        )
+      ),
+      Positioned(
+        left: 16.0,
+      top:16.0,
+          child:Text("Ixtenco Tlaxcala",style: TextStyle(fontSize: 30.0,fontWeight: FontWeight.bold),)
+      )
+    ],
+  );
 }
 
 Widget listDays() {
   return Padding(
-    padding: const EdgeInsets.all(16.0),
+    padding: const EdgeInsets.all(12.0),
     child: Column(
       children: <Widget>[
         dayWidget("Monday", Icons.wb_sunny, "32C"),
@@ -32,7 +49,7 @@ Widget listDays() {
 Widget dayWidget(String day, IconData iconData, String temp) {
   return Card(
     child: Padding(
-      padding: const EdgeInsets.all(22.0),
+      padding: const EdgeInsets.all(18.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[Text(day), Icon(iconData), Text(temp)],
