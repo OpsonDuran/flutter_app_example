@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(Directionality(
   textDirection: TextDirection.ltr,
-  child: Text("Hello World"),
+  child: Center(
+      child:Text("Hello World"),
+  ),
   )
 );
 
