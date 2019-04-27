@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "ui/home_page.dart";
 
 void main() => runApp(MyApp());
 
@@ -24,8 +25,7 @@ class MyApp extends StatelessWidget {
             ],),)
 
           ),
-          body: Center(
-            child: Text("Hello World"),)
+          body: HomePage()
         ),
       ),
     );
