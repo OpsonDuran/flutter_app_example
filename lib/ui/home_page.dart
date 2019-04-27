@@ -13,18 +13,24 @@ Widget headerHome() {
   return Stack(
     children: <Widget>[
       Container(
+          height: 100.0,
+          width: double.infinity,
+          child: Image.network(
+            "https://thetravelerbass.files.wordpress.com/2017/10/la-malinche-solitario-y-emblemc3a1tico-volcc3a1n-del-estado-de-tlaxcala.png",
+            fit: BoxFit.cover,
+          )),
+      Container(
         height: 100.0,
         width: double.infinity,
-        child: Image.network(
-          "https://thetravelerbass.files.wordpress.com/2017/10/la-malinche-solitario-y-emblemc3a1tico-volcc3a1n-del-estado-de-tlaxcala.png",
-          fit: BoxFit.cover,
-        )
+        color: Colors.black38,
       ),
       Positioned(
-        left: 16.0,
-      top:16.0,
-          child:Text("Ixtenco Tlaxcala",style: TextStyle(fontSize: 30.0,fontWeight: FontWeight.bold),)
-      )
+          left: 16.0,
+          top: 16.0,
+          child: Text(
+            "Ixtenco Tlaxcala",
+            style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+          ))
     ],
   );
 }
