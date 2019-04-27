@@ -14,8 +14,11 @@ class HomePage extends StatelessWidget {
 
 Widget dayWidget(String day, IconData iconData, String temp) {
   return Card(
-        child: Row(
-          children: <Widget>[Text(day), Icon(iconData), Text(temp)],
-        ),
-      );
+    child: Padding(
+      padding: const EdgeInsets.all(22.0),
+      child: Row(
+        children: <Widget>[Text(day), Icon(iconData), Text(temp)],
+      ),
+    ),
+  );
 }
