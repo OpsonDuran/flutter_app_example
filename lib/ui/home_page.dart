@@ -29,8 +29,13 @@ Widget headerHome() {
           top: 16.0,
           child: Text(
             "Ixtenco Tlaxcala",
-            style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-          ))
+            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          )),
+      Positioned(
+        right: 8.0,
+        bottom: 8.0,
+        child: Text("32C",style: TextStyle(fontSize:40,fontWeight: FontWeight.bold),),
+      )
     ],
   );
 }
